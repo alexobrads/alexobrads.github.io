@@ -181,14 +181,16 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="" method="post">
+                <form name="frmContact" id="frmContact" method="post"
+                action="contact-form-process.php" enctype="multipart/form-data"
+                onsubmit="return validateContactForm()">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
                         <input
                           name="name"
                           type="text"
-                          class="form-control"
+                          class="input-field"
                           id="name"
                           placeholder="Your name..."
                           required=""
@@ -200,7 +202,7 @@ https://templatemo.com/tm-531-reflux
                         <input
                           name="email"
                           type="text"
-                          class="form-control"
+                          class="input-field"
                           id="email"
                           placeholder="Your email..."
                           required=""
@@ -212,7 +214,7 @@ https://templatemo.com/tm-531-reflux
                         <input
                           name="subject"
                           type="text"
-                          class="form-control"
+                          class="input-field"
                           id="subject"
                           placeholder="Subject..."
                           required=""
@@ -224,7 +226,7 @@ https://templatemo.com/tm-531-reflux
                         <textarea
                           name="message"
                           rows="6"
-                          class="form-control"
+                          class="input-field"
                           id="message"
                           placeholder="Your message..."
                           required=""
@@ -232,11 +234,18 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
+                      <input type="submit" name="send" class="btn-submit"
+                             value="Send" />
+
+                      <div id="statusMessage">
+                        <?php
+                        if (! empty($message)) {
+                            ?>
+                        <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+                      </div>
                     </div>
                   </div>
                 </form>
