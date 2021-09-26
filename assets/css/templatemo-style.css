@@ -560,22 +560,23 @@ figure.snip1321 * {
 }
 figure.snip1321 figcaption {
   top: 50%;
-  left: 20px;
-  right: 20px;
+  left: 10%;
+  right: 10%;
   position: absolute;
   opacity: 0;
   z-index: 1;
 }
 figure.snip1321 h4 {
-    margin-top: 15px;
+  margin-top: 15px;
   margin-bottom: 5px;
   color: #232323;
+  font-size: 20px;
 }
 figure.snip1321 span {
     font-size: 14px;
     font-style: italic;
     display: block;
-    color: #7a7a7a;
+    color: #232323;
 }
 figure.snip1321 i {
   position: relative!important;
@@ -594,10 +595,10 @@ figure.snip1321:after {
   position: absolute;
   content: "";
   display: block;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  bottom: 30%;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   -webkit-transform: rotateX(-90deg);
@@ -605,7 +606,7 @@ figure.snip1321:after {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  opacity: 0;
+  opacity: 0.7;
 }
 figure.snip1321 a {
   left: 0;
@@ -613,20 +614,20 @@ figure.snip1321 a {
   top: 0;
   bottom: 0;
   z-index: 1;
-}
+  }
 figure.snip1321:hover figcaption,
-figure.snip1321.hover figcaption {
+figure.snip1321 figcaption {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 1;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-figure.snip1321:hover:after,
+figure.snip1321:after,
 figure.snip1321.hover:after {
   -webkit-transform: rotateX(0);
   transform: rotateX(0);
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 
