@@ -181,16 +181,14 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form name="frmContact" id="frmContact" method="post"
-                action="contact-form-process.php" enctype="multipart/form-data"
-                onsubmit="return validateContactForm()">
+                <form id="contact" action="https://formspree.io/f/mpzkbgya" method="POST" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
                         <input
                           name="name"
                           type="text"
-                          class="input-field"
+                          class="form-control"
                           id="name"
                           placeholder="Your name..."
                           required=""
@@ -202,7 +200,7 @@ https://templatemo.com/tm-531-reflux
                         <input
                           name="email"
                           type="text"
-                          class="input-field"
+                          class="form-control"
                           id="email"
                           placeholder="Your email..."
                           required=""
@@ -214,7 +212,7 @@ https://templatemo.com/tm-531-reflux
                         <input
                           name="subject"
                           type="text"
-                          class="input-field"
+                          class="form-control"
                           id="subject"
                           placeholder="Subject..."
                           required=""
@@ -226,26 +224,27 @@ https://templatemo.com/tm-531-reflux
                         <textarea
                           name="message"
                           rows="6"
-                          class="input-field"
+                          class="form-control"
                           id="message"
                           placeholder="Your message..."
                           required=""
                         ></textarea>
                       </fieldset>
                     </div>
+<!--                    <div class="col-md-12">-->
+<!--                      <fieldset>-->
+<!--                        <input-->
+<!--                          name="upload"-->
+<!--                          type="file"-->
+<!--                        />-->
+<!--                      </fieldset>-->
+<!--                    </div>-->
                     <div class="col-md-12">
-                      <input type="submit" name="send" class="btn-submit"
-                             value="Send" />
-
-                      <div id="statusMessage">
-                        <?php
-                        if (! empty($message)) {
-                            ?>
-                        <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
-                        <?php
-                        }
-                        ?>
-                      </div>
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
                     </div>
                   </div>
                 </form>
